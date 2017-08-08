@@ -1,0 +1,25 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "monodemo",
+      "host": {
+        "sourcePath": "/var/app/current/monodemo"
+      }
+    }
+   ],
+  "containerDefinitions": [
+    {
+      "name": "monodemo",
+      "image": "915527427225.dkr.ecr.ap-northeast-1.amazonaws.com/monodemo:latest",
+      "essential": true,
+      "memory": 500,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
+     }
+  ]
+}
